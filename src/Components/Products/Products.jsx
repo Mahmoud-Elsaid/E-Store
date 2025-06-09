@@ -17,9 +17,9 @@ export default function Products() {
 
 
     //Update cart Number in the navbar
-      let {getCartProducts}= useContext(CartContext);
+      let {getCart}= useContext(CartContext);
       async function getCartAllProducts(){
-            let response = await getCartProducts();
+            let response = await getCart();
             console.log("hello")
             setNumberOfCartItems(response.data.numOfCartItems);
             console.log("product" , response);
